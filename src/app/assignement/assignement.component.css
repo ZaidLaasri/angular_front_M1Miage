@@ -1,0 +1,11 @@
+.rendu{
+  color: green;
+  border: 1px chartreuse dashed;
+}
+
+.nonRendu{
+  margin-top: 5px;
+  color: red;
+  border: 1px yellow solid;
+}
+
