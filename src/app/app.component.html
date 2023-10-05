@@ -1,10 +1,64 @@
+<!--
 <mat-slide-toggle style="display: block">Toggle me!</mat-slide-toggle>
 
 <mat-button-toggle appRendu>  Click me!</mat-button-toggle>
 
 <button mat-raised-button color="accent">Accent</button>
+-->
+
+<!-- Dans le fichier HTML de votre composant -->
 
 
-<app-assignement></app-assignement>
+<mat-sidenav-container class="sidenav-container">
+  <mat-sidenav #sidenav class="sidenav" mode="side">
+    <mat-nav-list>
+      <a mat-list-item href="#">
+        <mat-icon>view_module</mat-icon>
+        Liste des devoirs
+      </a>
 
+      <a mat-list-item href="#">
+        <mat-icon>note_add</mat-icon>
+        Ajouter un devoir
+      </a>
+
+      <a mat-list-item href="#">
+        <mat-icon>edit</mat-icon>
+        Modifier un devoir
+      </a>
+
+      <a mat-list-item href="#">
+        <mat-icon>delete</mat-icon>
+        Supprimer un devoir
+      </a>
+
+      <a mat-list-item href="#">
+
+        <mat-icon>warning</mat-icon>
+        Génération de données de test
+      </a>
+    </mat-nav-list>
+  </mat-sidenav>
+
+  <mat-sidenav-content>
+    <mat-toolbar color="primary">
+      <button mat-icon-button (click)="sidenav.toggle()">
+        <mat-icon>menu</mat-icon>
+      </button>
+      <mat-icon aria-hidden="false" aria-label="Example home icon" fontIcon="home"></mat-icon>
+      <a href="" style="text-decoration: none; margin-left: auto; color: beige;">Se connecter</a>
+    </mat-toolbar>
+
+    <mat-card>
+      <mat-card-content>
+        <div class="main-content">
+
+          <app-assignement></app-assignement>
+        </div>
+      </mat-card-content>
+    </mat-card>
+
+
+  </mat-sidenav-content>
+</mat-sidenav-container>
 <router-outlet></router-outlet>

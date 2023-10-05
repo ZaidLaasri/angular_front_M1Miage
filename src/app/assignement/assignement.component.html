@@ -1,15 +1,6 @@
-<p>assignement works!</p>
 
-<p>Mon titre est {{tittre}}</p>
 
-<form #formAssignement>
 
-  <button mat-stroked-button
-          [ngStyle]="{color:colorActive}"
-          [disabled]=ajoutActive>
-    Ajouter un devoir !
-  </button>
-</form>
 <div *ngFor="let a of assignements" [ngClass]="{'rendu':a.rendu, 'nonRendu':!a.rendu}">
   <p *ngIf="a.rendu; else nonRendu" appRendu>Le devoir {{a.nom}} est rendu à cette date {{a.dateRendu}} avec une note
     de {{a.note}}</p>
@@ -19,3 +10,15 @@
   </ng-template>
 </div>
 
+
+<mat-list *ngFor="let a of assignements" >
+<div *ngFor="let a of assignements" [ngClass]="{'rendu':a.rendu, 'nonRendu':!a.rendu}">
+
+  <p *ngIf="a.rendu; else nonRendu" appRendu>Le devoir {{a.nom}} est rendu à cette date {{a.dateRendu}} avec une note
+    de {{a.note}}</p>
+
+  <ng-template #nonRendu>
+    <p>Le devoir {{a.nom}} n'est pas rendu avec une note de {{a.note}}</p>
+  </ng-template>
+</div>
+</mat-list>

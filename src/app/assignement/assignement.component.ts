@@ -1,4 +1,5 @@
 import {Component, OnInit} from '@angular/core';
+import {AssignementModel} from "./assignement.model";
 
 @Component({
   selector: 'app-assignement',
@@ -8,6 +9,10 @@ import {Component, OnInit} from '@angular/core';
 export class AssignementComponent implements OnInit {
   tittre = "Zaid page"
   ajoutActive = false;
+
+  dateDevoir: any;
+  nomDevoir: any;
+  renduDevoir: any;
 
   colorActive = "green";
 
@@ -37,6 +42,19 @@ export class AssignementComponent implements OnInit {
       this.colorActive = "blue";
 
     }, 3000);
+  }
+
+  onSubmit() {
+    console.log("on appuie");
+    console.log(this.nomDevoir);
+    const newAssignement = new AssignementModel();
+    newAssignement.nom=this.nomDevoir;
+    newAssignement.dateRendu=this.dateDevoir
+
+    newAssignement.rendu=this.renduDevoir
+
+    console.log(newAssignement);
+
   }
 
 }

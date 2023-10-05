@@ -14,12 +14,26 @@ import { MatFormFieldModule} from "@angular/material/form-field";
 import {FormsModule} from "@angular/forms";
 import {MatInputModule} from "@angular/material/input";
 import {MatDividerModule} from "@angular/material/divider";
+import {MatDatepickerModule} from "@angular/material/datepicker";
+import {MatCheckboxModule} from "@angular/material/checkbox";
+import {MatNativeDateModule} from "@angular/material/core";
+import {MatToolbarModule} from "@angular/material/toolbar";
+import {MatIconModule} from "@angular/material/icon";
+import {MatSidenavModule} from "@angular/material/sidenav";
+import {MatListModule} from "@angular/material/list";
+import {MatCardModule} from "@angular/material/card";
+import { AssignmentDetailComponent } from './assignement/assignment-detail/assignment-detail.component';
+import { AssignmentListComponent } from './assignement/assignment-list/assignment-list.component';
+import { AssignmentAddComponent } from './assignement/assignment-add/assignment-add.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     AssignementComponent,
-    RenduDirective
+    RenduDirective,
+    AssignmentDetailComponent,
+    AssignmentListComponent,
+    AssignmentAddComponent
   ],
   imports: [
     BrowserModule,
@@ -31,7 +45,15 @@ import {MatDividerModule} from "@angular/material/divider";
     MatFormFieldModule,
     FormsModule,
     MatInputModule,
-    MatDividerModule
+    MatDividerModule,
+    MatDatepickerModule,
+    MatCheckboxModule,
+    MatNativeDateModule,
+    MatToolbarModule,
+    MatIconModule,
+    MatSidenavModule,
+    MatListModule,
+    MatCardModule
   ],
   providers: [],
   bootstrap: [AppComponent]
